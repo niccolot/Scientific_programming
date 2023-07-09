@@ -128,7 +128,7 @@ In order to identify and study a phase transition one needs observables that cha
 
 Implementing the system in the ```perc_rand_graph.c``` program some numerical symulation with different graph sizes have been done. In particular the graph was evolved for 100 values of $c$ in the range $[0,2]$ producing 1000 different trajectories to be averaged in order to obtain the ensemble average (as a normal montecarlo simulation), all of this for $N=10^3, 10^4, 10^5, 10^6$. The results are reported below
 
-<img src='images/plot.png' height='450' width='1100'>
+<img src='images/plot.png' height='650' width='1100'>
 
 The values $\langle\bar{S}'\rangle_{c=1}$ and $\langle S_{\textrm{max}}\rangle_{c=1}$ have been fitted as a function of the size N obtaining 
 

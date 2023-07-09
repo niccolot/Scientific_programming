@@ -135,6 +135,7 @@ The values $\langle\bar{S}'\rangle_{c=1}$ and $\langle S_{\textrm{max}}\rangle_{
 $$
 \langle\bar{S}'\rangle_{c=1} \propto N^{\alpha}\\
 \ \\
+\ \\
 \frac{\langle S_{\textrm{max}}\rangle_{c=1}}{N} \propto N^{-\beta} \rightarrow \langle S_{\textrm{max}}\rangle_{c=1} \propto N^{\beta}
 $$
 

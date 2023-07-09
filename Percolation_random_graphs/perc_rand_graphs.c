@@ -82,7 +82,6 @@ int main(){
         fprintf(pf_trajectories, "\n");
     }
 
-
     fclose(pf_trajectories);
 
     return 0;

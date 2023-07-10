@@ -30,7 +30,7 @@ $$
 f_k = \binom{N-1}{k}p^k(1-p)^{N-1-k}
 $$
 
-with $f_k$ the probability that a node has degree $k$. Indeed not being vincolated by a fixed amount of total edges, for each node independently the probability of having $k$ nodes equals to the number of ways of choosing the $k$ nodes out of N notal (so the binomial) multiplied by the probability that the $k$ chosen nodes have a link with the node in question and the remaining $N-1-k$ don't (and indeed $\sum_k^{N-1} f_k = 1$).
+with $f_k$ the probability that a node has degree $k$. Indeed not being vincolated by a fixed amount of total edges, for each node independently the probability of having $k$ nodes equals to the number of ways of choosing the $k$ nodes out of N notal (so the binomial) multiplied by the probability that the $k$ chosen nodes have a link with the node in question and the remaining $N-1-k$ don't (and indeed $\displaystyle\sum_k^{N-1} f_k = 1$).
 
 Now let's consider the case in which the average degree of the graph is fixed in the infinite volume limit:
 
@@ -50,7 +50,7 @@ Indeed we now show that $c$ represents an order parameter for the phase transiti
 
 Considering a graph with N nodes with $m$ the fraction of nodes belonging to the percolating cluster, $m$ will be different from zero only when the percolating cluster is macroscopic: let's consider adding a new vertex to the graph. This new graph still belongs to $\mathcal{G}_{N,p}$ if each edge between the new node and the old nodes are present with the right probability $p=c/N$. 
 
-In this case the degree of the new vertex is a random variable distributed as a poissonian distribution and the probability that the a vertex belongs to the giant cluster is still $m$ (up to terms $\mathcal{O}(\frac{1}{N})$) even after adding the new vertex and is given by the solution of
+In this case the degree of the new vertex is a random variable distributed as a poissonian distribution and the probability that the a vertex belongs to the giant cluster is still $m$ up to terms $\mathcal{O} \big(\frac{1}{N}\big)$ even after adding the new vertex and is given by the solution of
 
 $$
 1-m = \displaystyle\sum_{k=0}^{\infty}e^{-c}\frac{c^k}{k!}(1-m)^k
@@ -70,13 +70,18 @@ which can be solved numerically (and graphically as reported below) or analitica
 <img src='images/plot_eq.png' height='400' width='500'>
 
 $$
-1-m \approx 1-cm+\frac{1}{2}c^2m^2 \rightarrow 
+1-m \approx 1-cm+\frac{1}{2}c^2m^2
+$$
 
+with solutions
+
+$$
 \begin{cases}
     m = 0\\
     m = 2(c-1)/c^2 \approx 2(c-1)
 \end{cases}
 $$
+
 
 With $c>1$ another solution beside the trivial one $m=0$ appears, indicating the presence of a giant cluster i.e. for $c=c_p=1$ critical value the $\mathcal{G}_{N,p}$ undergoes a phase transition from forest to percolating.
 
@@ -86,41 +91,21 @@ In order to identify and study a phase transition one needs observables that cha
 
 1. **Average size of the connected components**
 
-    As first observable we define the average size of the connected components
-
-    $$
-    \bar{S} \equiv \frac{1}{N}\displaystyle \sum_{i=1}^NS_i = \frac{1}{N}\displaystyle\sum_{C}S_{C}^2
-    $$
+    As first observable we define the average size of the connected components $$\bar{S} \equiv \frac{1}{N}\displaystyle \sum_{i=1}^NS_i = \frac{1}{N}\displaystyle\sum_{C}S_{C}^2$$
 
     with $S_i$ the size of the connected compent node $i$ belongs to. $\bar{S}$ can be expressed also in term of the sum of square of the size of the connected componets $S_C$ grouping togheter all the vertices belonging to the same cluster.
 
-    Due to the fact that for $c>1$ the average size will be dominated by the biggest cluster, we actually use the average size excluding the biggest connected component from the summation
-
-    $$
-    \bar{S}' \equiv \frac{1}{N} \displaystyle \sum_{C'}S_C^2
-    $$ 
+    Due to the fact that for $c>1$ the average size will be dominated by the biggest cluster, we actually use the average size excluding the biggest connected component from the summation $$\bar{S}' \equiv \frac{1}{N} \displaystyle \sum_{C'}S_C^2$$
 
     Let's show that the ensemble average of this quantity diverges as $c\rightarrow1$:
 
-    after two clusters of sizes $S_1$ and $S_2$ merges the difference in the average size is $\Delta\bar{S}' = 2S_1S_2/N$ as before the merging their contribution to the summation for $\bar{S}'$ is $S_1^2 + S_2^2$ while after the merging is $(S_1+S_2)^2$. After the merge also the average degree of the graph changes as $\Delta c = 2/N$. Taking the ensemble average then we have the differential equation
+    after two clusters of sizes $S_1$ and $S_2$ merges the difference in the average size is $\Delta\bar{S}' = 2S_1S_2/N$ as before the merging their contribution to the summation for $\bar{S}'$ is $S_1^2 + S_2^2$ while after the merging is $(S_1+S_2)^2$. After the merge also the average degree of the graph changes as $\Delta c = 2/N$. Taking the ensemble average then we have the differential equation $$\Big\langle\frac{\Delta\bar{S}'}{\Delta c}\Big\rangle \approx \dot{\langle\bar{S}'\rangle} = \langle\bar{S}\rangle^2$$
 
-    $$
-    \Big\langle\frac{\Delta\bar{S}'}{\Delta c}\Big\rangle \approx \dot{\langle\bar{S}'\rangle} = \langle\bar{S}\rangle^2
-    $$
+    which is solved as $$\langle\bar{S}\rangle = \frac{1}{1-c}$$
 
-    which is solved as 
-    $$
-    \langle\bar{S}\rangle = \frac{1}{1-c}
-    $$
+3. **Maximum cluster size**
 
-2. **Maximum cluster size**
-
-    As first observable we choose the size of the largest cluster by size of the graph, i.e.
-
-    $$
-    \frac{\langle S_{\textrm{max}}\rangle}{N}
-    $$
-
+    As first observable we choose the size of the largest cluster by size of the graph, i.e. $$\frac{\langle S_{\textrm{max}}\rangle}{N}$$
     which we expect to be 0 for $c<1$ and tending towards 1 for  $c>1.$
 
 
@@ -133,10 +118,11 @@ Implementing the system in the ```perc_rand_graph.c``` program some numerical sy
 The values $\langle\bar{S}'\rangle_{c=1}$ and $\langle S_{\textrm{max}}\rangle_{c=1}$ have been fitted as a function of the size N obtaining 
 
 $$
+\begin{cases}
 \langle\bar{S}'\rangle_{c=1} \propto N^{\alpha}\\
 \ \\
-\ \\
 \frac{\langle S_{\textrm{max}}\rangle_{c=1}}{N} \propto N^{-\beta} \rightarrow \langle S_{\textrm{max}}\rangle_{c=1} \propto N^{\beta}
+\end{cases}
 $$
 
 with 

@@ -11,10 +11,10 @@ The percolating phenomenon is then described as a dynamical process: starting fr
 A random graph is a graph generated from a stochastic process, such as adding links between nodes randomly chosen. With fixed N nodes and M edges, the total number of graphs composing the ensemble $\mathcal{G}_{N,M}$ is given by 
 
 $$
-\binom{A}{M} = \frac{A!}{M!(A-M)!} \hspace{2cm} A \equiv \frac{N(N-1)}{2}
+\binom{A}{M} = \frac{A!}{M!(A-M)!} 
 $$
 
-with A the total number of edges between N nodes.
+with $A \equiv \frac{N(N-1)}{2}$ the total number of edges between N nodes.
 
 Considering the limit of infinite volume $N \rightarrow \infty$ simplifies the calculation of observables for the sysyem. In this limit we consider the equivalent ensemble $\mathcal{G}_{N,p}$ of graphs with N fixed nodes and a probability 
 
@@ -24,7 +24,7 @@ $$
 
 of having an edge between two nodes, with the total number of edges not fixed anymore.
 
-The degree of every vertex is a number $\in \{0,\dots,N-1\}$ distributed as 
+The degree of every vertex is a number $\in \\{0,\dots,N-1\\}$ distributed as 
 
 $$
 f_k = \binom{N-1}{k}p^k(1-p)^{N-1-k}

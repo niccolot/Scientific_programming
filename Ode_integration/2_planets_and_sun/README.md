@@ -1,6 +1,6 @@
 # **2 body problem with central force**
 
-This script is a numerical integration algorithm using $2^{\circ}$ order Runge-Kutta of a system composed of 2 bodies interacting with a coulomb-like force $\propto \displaystyle\frac{1}{r^2}$ both inside a central force field, like two planets orbiting around a fixed sun and interacting with themselves.
+This script is a numerical integration algorithm using $2^{\circ}$ order Runge-Kutta of a system in $\mathbb{R}^2$ composed of 2 bodies interacting with a coulomb-like force $\propto \displaystyle\frac{1}{r^2}$ both inside a central force field, like two planets orbiting around a fixed sun and interacting with themselves.
 
 $$
 \begin{cases}

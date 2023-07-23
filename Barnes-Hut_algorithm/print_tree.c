@@ -6,7 +6,7 @@ static void print_tree_aux(FILE * f, int mode, int level, char * s, node_t * q);
 void print_tree (FILE * f, int mode, node_t * q){
    if ( f == NULL ) return ;
    if ( q == NULL ) {
-      fprintf(f,"Albero vuoto\n"); 
+      fprintf(f,"Empty tree\n"); 
       return ;
    }
    print_tree_aux(f,mode,0," ", q); 

@@ -1,6 +1,6 @@
 # **Barnes-Hut algorithm**
 
-The barnes Hut algorithm is used to approximate the N-body problem (usually $\mathcal{O}(N^2)$) linearly with the number of bodies (i.e. $\mathcal{O}(N)$). Here is implemented for the planar case.
+The barnes Hut algorithm is used to approximate the N-body problem, usually $\mathcal{O}(N^2)$, linearly with the number of bodies i.e. $\mathcal{O}(N)$. Here is implemented for the planar case.
 
 It consists in considering sufficiently distant bodies as a unique body of mass equal to the total mass and position given by the mass center.
 
@@ -10,7 +10,7 @@ In order to insert a body of mass $m$ and coordinates $(x,y)$ one starts from th
 
 <img src='images/quadrants_tree.png' height='400' width='900'>
 
-A group of bodies pointed by node $B$ will belong to a portion of space of radius $s = \displaystyle \frac{s^*}{2^h}$ with $h$ the depth of the ndoe and $s^*$ the global radius.
+A group of bodies pointed by node $B$ will belong to a portion of space of radius $s = \displaystyle \frac{s^{\*}}{2^h}$ with $h$ the depth of the ndoe and $s^{\*}$ the global radius.
 
 In order to calculate the force on a body $a$, $\boldsymbol{F}(a)$, one sets a tolerance $\theta$. The force exerted upon $a$ by the group at node $B$ with $d = \textrm{dist}(a,B)$ the distance from a to the mass center of node $B$ is calculated as such:
 

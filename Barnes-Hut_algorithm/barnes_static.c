@@ -358,12 +358,12 @@ void get_force_aux(double x, double y, double m, double *fx, double *fy, double 
 	if(size/d < theta || (root -> NW == NULL && root -> NE == NULL && root -> SE == NULL && root -> SW == NULL)){
 		
 		double Dx = root->x - x;
-		double DY = root->y - y;
+		double Dy = root->y - y;
 		double f = G*m*(root->mass)/pow(d,2); // modulus of the force
 		
 		// force components
 		*fx += f*Dx/d;
-		*fy += f*DY/d;
+		*fy += f*Dy/d;
 		
 		return;
 	}
